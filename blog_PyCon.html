@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="en"><head>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320"><meta name="author" content="Play Studio"><meta name="web_author" content="Isack Odero"><meta name="theme-color" content="#000000"><meta name="description" content="Explaining indepth concept about Artificial Intelligence"><meta name="robots" content="index,follow"><meta name="generator" content="Eleventy"><meta name="copyright" content="Copyright 2021"><title>PyCon Tanzania 2021 Presentation</title>
+
+<link rel="canonical" href="blog/series-c/">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@IsackOdero">
+<meta name="twitter:creator" content="@IsackOdero">
+<meta name="twitter:description" content="Explaining indepth concept about Artificial Intelligence">
+<meta name="twitter:title" content="IsackOdero">
+<meta name="twitter:image" content=/images/social/twitter/default.jpg">
+<meta name="twitter:image:width" content="1200">
+<meta name="twitter:image:height" content="675">
+
+
+<meta property="og:url" content="/blog/series-c/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="PyCon Tanzania 2021 Presentatin">
+<meta property="og:site_name" content="IsackOdero">
+<meta property="og:description" content="Explaining indepth concept about Artificial Intelligence">
+<meta property="og:image" content="/images/social/facebook/default.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="628">
+<meta property="og:image:alt" content="IsackOdero logo">
+<meta property="og:locale" content="en_US">
+
+
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+<link rel="apple-touch-icon-precomposed" href="/images/touch-icon.png">
+  
+<link rel="stylesheet" href="Blog%20-%20io_files/app.css">
+
+
+<script src="Blog%20-%20io_files/app.js"></script>
+
+</head>
+
+<body>
+  
+
+
+
+
+<header class="globalHeader -not-inverted" role="banner">
+  <div class="globalHeader-container container">
+    <a href="Blog - IsackOdero.html">
+      <h1 class="_hidden">
+        IsackOdero
+      </h1>
+
+      
+        
+  <div class="logo">
+    <svg viewBox="0 0 62 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd"  fill="var(--color-type-light)">
+        
+          <h1>io</h1>
+        
+      </path>
+    </svg>
+  </div>
+
+      
+    </a>
+
+    <svg aria-label="Open Navigation" class="hamburger" viewBox="0 0 100 100" width="80">
+  <path class="hamburger-line hamburger-top" d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40"></path>
+  <path class="hamburger-line hamburger-middle" d="m 30,50 h 40"></path>
+</svg>
+
+    
+    
+  
+    <nav class="navigation -header" aria-labelledby="header_navLabel">
+      <p id="header_navLabel" class="_hidden">
+        Header Navigation
+      </p>
+
+      <ul class="navigation-list">
+        
+
+        
+          <li class="navigation-listItem">
+            <a class="navigation-link -not-inverted" href="Blog - IsackOdero.html" data-state="active">
+              Blog
+            </a>
+          </li>
+        
+      </ul>
+
+      <div class="nav-social _mobile-only">
+        <a class="-color-gray globalFooter-link" href="mailto:oderoisack1@icloud.com" title="Reach out to my Email">
+          oderoisack1@icloud.com
+        </a>
+
+        <a class="-color-gray globalFooter-link" href="https://twitter.com/IsackOdero" title="Follow me on Twitter">
+          @IsackOdero
+        </a>
+
+   
+
+      </div>
+    </nav>
+  
+
+  </div>
+</header>
+
+
+  <main tabindex="-1" role="main" id="main-content">
+    
+  
+    <article class="blogPost container">
+  <header class="blogPost-header">
+    <h1 class="blogPost-title _type-size-h2">
+     PyCon Tanzania 2021 Presentation
+    </h1>
+  </header>
+
+  <div class="blogPost-section grid -padding-bottom -less-top-margin">
+    <div class="column-6">
+      <h3><u>Transfer Learning for Computer Vision Using PyTorch and Flask</u></h3>
+
+      <p>
+        <h4><u>In this recipe, you will learn:</u></h4>
+
+<h4>In Transfer Learning:</h4>
+<ul>
+  <li>
+    How to Load your datasets 
+  </li>
+  <li>
+     How to Visualize your datasets
+  </li>
+  <li>
+    How to Write a general function to training your model
+  </li>
+  <li>
+    How to Finetuning the Conv Net
+  </li>
+  <li>
+    How to run Conv Net as Feature extractor
+  </li>
+  <li>
+    How to save your model
+  </li>
+</ul>
+  
+
+<h4>In Deploying your Modelwith Flask:</h4>
+<ul>
+
+  <li>How to wrap your trained PyTorch model in a Flask container to expose it via a web API</li>
+  <li>How to translate incoming web requests into PyTorch tensors for your model</li>
+  <li>How to package your model’s output for an HTTP response</li>
+</ul>
+
+<h4><u>Requirements</u></h4>
+
+
+<h5>You will need a Python 3 environment with the following packages (and
+their dependencies) installed:</h5>
+<ul>
+ <li>PyTorch </li>
+  <li>TorchVision </li>
+  <li>Matplotlib.pyplot</li>
+  <li>copy</li>
+  <li>os</li>
+  <li>numpy</li>
+  <li>Flask 1.1 </li>
+</ul>
+</p>
+      <p>
+        <h4><u>Introduction to Transfer Learning</u></h4>
+        <h4>Transfer Learning:</h4>
+
+   <ul>In practice, very few people train an entire Convolutional
+   Network from scratch , because it is relatively rare to have a dataset of sufficient size. Instead, it is
+   common to pretrain a ConvNet on a very large dataset (e.g.
+   ImageNet, which contains 1.2 million images with 1000
+   categories), and then use the ConvNet either as an initialization
+   or a fixed feature extractor for the task of interest.</ul>
+   </p>
+
+   <p>
+   <h4>Transfer Learning scenarios:</h4>
+
+    <i> ConvNet as fixed feature extractor.</i>
+    <ul>
+      <li>
+      Here we freeze the weights and bias of all network except thatof fully connected layer, 
+          then this fully connected layer is trained and it' weight and bias are replaced with new ones. 
+       </li>
+     
+    </ul>       
+      
+             
+    <i>Fine-tuning the ConvNet..</i>
+    <ul>
+      <li>   
+        Here we initialize our Network using pretrained Network and train it. Here we do not initialize our network randomly.  It is possible to fine-tune all the layers of the ConvNet, or it’s possible to keep some of the earlier layers fixed (due to overfitting concerns) and only fine-tune some higher-level portion of the network. </li></ul>
+      </li>
+    </ul>
+   
+      
+          
+<i> Pretrained models.</i>
+    <ul>
+      <li>
+         Since modern ConvNets can take weeks to train across multiple GPUs on ImageNet, it is common to see people release their final ConvNet checkpoints for the benefit of others who can use the networks for fine-tuning. 
+      </li>
+    </ul>
+</p>
+      
+<p>
+       <h5> When and how to fine-tune?:</h5>
+ 
+  <i>
+     Important ones are the size of the new dataset (small or big), and its similarity to the original dataset.
+  </i>
+
+<br />
+<br />
+   <i>
+     -  1: New dataset is small and similar to original dataset.
+   </i>
+   <ul>
+     <li>
+         Since the data is small, it is not a good idea to fine-tune the ConvNet due to overfitting concerns.               Since the data is similar to the original data, we expect higher-level features in the ConvNet to be               relevant to this dataset as well. Hence, the best idea might be to train a linear classifier on the CNN           codes.
+     </li>
+    </ul>    
+          
+          
+    <i>      
+   -  2: New dataset is large and similar to the original dataset.
+  </i>
+  <ul>
+    <li>
+        Since we have more data, we can have more confidence that we won’t overfit if we were to try to fine -             tune through the full network.
+    </li>
+  </ul>
+      
+      
+      <i>    
+   -  3: New dataset is small but very different from the original dataset.
+      </i>
+      <ul>
+        <li>
+         Since the data is small, it is likely best to only train a linear classifier. Since the dataset is very           different, it might not be best to train the classifier from the top of the network, which contains more           dataset-specific features. Instead, it might work better to train the SVM classifier from activations             somewhere earlier in the network. 
+        </li>
+      </ul>      
+      
+      
+      <i>    
+   -  4: New dataset is large and very different from the originaldataset.
+      </i>
+      <ul>
+        <li>
+         Since the dataset is very large, we may expect that we can afford to train a ConvNet from scratch.                 However, in practice it is very often still beneficial to initialize with weights from a pretrained               model. In this case, we would have enough data and confidence to fine-tune through the entire network.
+        </li>
+      </ul>
+        </p>
+
+      <p>
+        <h4>Define the Problem.</h5>
+          <ul>
+            <li>
+               The problem we’re going to solve today is to train a model to classify ants and bees. We have about 120            training images each for ants and bees. There are 75 validation images for each class. Usually, this is a very    small dataset to generalize upon, if trained from scratch. Since we are using transfer learning, we should be able to generalize reasonably well
+            </li>
+          
+            <li>
+               This dataset is a very small subset of imagenet.
+            </li>
+          </ul>
+  
+      </p>
+      <p>
+        <h5>open your notebook</h5>
+        <h5>**Author**: `Isack Odero`</h5>
+      </p>
+      <p <i class="fa fa-text-height" aria-hidden="false"></i>
+        <ul>
+          <i>
+            <h5>
+              =======================================================================<br>
+          import torch<br>
+          import torchvision<br>
+          from torchvision import transforms, models, datasets<br>
+          <br>
+          import numpy as np<br>
+          import matplotlib.pyplot as plt<br>
+          import os<br>
+          import copy<br>
+          <br>
+          plt.ion()<br>
+
+          print("Torch Version: {} \nTorchVision Version: {}".format(torch.__version__, torchvision.__version__))
+          =======================================================================<br>
+        </h5>
+      </i>
+      </ul>
+      </p>
+
+
+
+      <p>
+
+        <h4>Load Data</h4>
+        <br>
+        
+<i>  We will use `torchvision` and `torch.utils.data` packages for:</i>
+<ul>
+<li>
+    loading the data.
+  </li>
+
+   <li>
+       Data augmentation and normalization for training
+   </li><br>
+  </ul>
+   
+   
+<b>note: <i>data_dir is the root directory where you put your data in your computer, in which for me is "/home/isack/Desktop/PyCon Tanzania 2021/data"</i></b>
+            
+</p>
+
+<p>
+  <h5><ul>
+=======================================================================<br>
+  # This is my directory<br>
+data_dir="/home/isack/Desktop/PyCon Tanzania 2021/data"<br>
+<br>
+# Data augmentation and normalization<br>
+transform = {<br>
+    "train": transforms.Compose([<br>
+       <ul> transforms.ToTensor(),<br>
+        transforms.RandomResizedCrop(224),<br>
+        transforms.RandomHorizontalFlip(),<br>
+        transforms.Normalize(mean = [0.485, 0.456, 0.406] , std = [0.229, 0.224, 0.225])<br></ul>
+    ]),<br>
+    "val": transforms.Compose([<br>
+        <ul>transforms.ToTensor(),<br>
+        transforms.Resize(224),<br>
+        transforms.CenterCrop(224),<br>
+        transforms.Normalize(mean = [0.485, 0.456, 0.406] , std = [0.229, 0.224, 0.225])<br></ul>
+    ])<br>
+}<br>
+<br>
+# Load dataset<br>
+dataset = {x: datasets.ImageFolder(root = os.path.join(data_dir, x), transform = transform[x]) for x in ["train", "val"]}<br>
+<br>
+# Make your dataset iteratible and define your batch_size, shuffle and num_workers<br>
+dataloader = {x: torch.utils.data.DataLoader(dataset[x], batch_size = 4, shuffle=True, num_workers= 0) for x in ["train", "val"]}<br>
+<br>
+# Define my dataset size<br>
+dataset_sizes = {x: len(dataset[x]) for x in ["train","val"]}<br>
+<br>
+# Define my device<br>
+device = torch.device("cuda :0") if torch.cuda.is_available() else print("cpu")<br>
+
+=======================================================================<br>
+<ul>
+</h5>
+</p>
+<p>
+  <h4>Visualize a few images</h4>
+-
+
+<i> Let's visualize a few training images so as to understand the data augmentations.</i>
+</p>
+
+<p>
+  <h5><ul>
+    
+      =======================================================================<br>
+      def show(imgs, title=None):<br>
+    <ul>np_imgs = imgs.numpy().transpose(1, 2, 0)<br>
+    mean = [0.485, 0.456, 0.406] <br>
+    std = [0.229, 0.224, 0.225]<br>
+    np_imgs= np_imgs*std + mean<br>
+    <br>
+    np_imgs= np.clip(np_imgs, 0, 1)<br>
+    plt.imshow(np_imgs)<br>
+    plt.title(title)<br></ul>
+<br>
+# Get your batch training dataset<br>    
+inputs, labels = next(iter(dataloader["val"]))<br>
+<br>
+# Make a grid from batch<br>
+imgs = torchvision.utils.make_grid(inputs)<br>
+<br>
+# Showing my images<br>
+show(imgs, title = [dataset["val"].classes[x] for x in labels])<br>
+=======================================================================<br>
+    </ul>
+  </h5>
+</p>
+<p>
+
+   <h4>Training the model</h4>
+
+  <i> Now, let's write a general function to train a model. Here, we will illustrate:</i>
+
+<ul>
+     <li>  Scheduling the learning rate</li>
+    
+     <li>  Saving the best model</li></ul>
+  
+   <i>In the following, parameter ``scheduler`` is an LR scheduler object from ``torch.optim.lr_scheduler``.</i>
+
+</p>
+<p>
+<h5><ul>
+  =======================================================================<br>
+  def NN(model, optimizer, criterion, scheduler, dataset_size, num_epoch):<br>
+    <ul>best_model = copy.deepcopy(model.state_dict())<br>
+    best_acc = 0.0<br>
+    <br>
+    for epoch in range(num_epoch):<br>
+        <br>
+        <ul>epoch_loss = 0.0<br>
+        epoch_acc = 0<br>
+        <br>
+        print("{}/{}".format(epoch+1, num_epoch))<br>
+        <br>
+        # Each epoch has a training and validation phase<br>
+        for phase in ["train","val"]:<br>
+            <br>
+            <ul># Set model to training mode<br>
+            if phase =="train":<br>
+                model.train()  <br>
+            <br>
+            # Set model to evaluate mode<br>
+            if phase == "val":<br>
+                model.eval()  <br>
+            <br>
+            running_loss = 0.0<br>
+            running_acc = 0<br>
+            <br>
+            # Iterate over data.<br>
+            for inputs, labels in dataloader[phase]:<br>
+                <br>
+               <ul> inputs = inputs.to(device)<br>
+                labels = labels.to(device)<br>
+                <br>
+                # zero the parameter gradients<br>
+                optimizer.zero_grad()<br>
+                <br>
+                # forward<br>
+                # track history if only in train<br>
+                with torch.set_grad_enabled(phase == "train"):<br>
+                    <br>
+                    <ul>#Forward Propagation<br>
+                    output = model(inputs)<br>
+                    _,pred = torch.max(output, 1)<br>
+                    <br>
+                    #Loss<br> 
+                    loss = criterion(output, labels.data)<br>
+                    <br>
+                    # backward + optimize only if in training phase<br>
+                    if phase == "train":<br>
+                       <ul> loss.backward()<br>
+                        optimizer.step()</ul><br>
+                    </ul>
+                        <br>
+                #Perform Statistic / To find our running Loss and Acc<br>
+                running_loss += loss.item() * inputs.size(0)<br>
+                running_acc += torch.sum(pred == labels.data)<br>
+               </ul>
+                <br>
+            epoch_loss = running_loss / dataset_size[phase]<br>
+            epoch_acc = running_acc / dataset_size[phase]<br>
+            <br>
+            # Update our learning rate<br>
+            if phase == "train":<br>
+                <ul>scheduler.step()</ul><br>
+                <br>
+            print("Phase: {}  Epoch Loss : {:.4f}  Epoch Acc : {:.4f}".format(phase, epoch_loss, epoch_acc))<br>
+            <br>
+            if phase == "val" and epoch_acc > best_acc:<br>
+                <ul>best_acc = epoch_acc<br>
+                best_model = copy.deepcopy(model.state_dict())</ul><br>
+                <br>
+            </ul>    
+            <br>
+        print()<br>
+        </ul>
+        <br>
+    print("Best Acc : {}".format(best_acc))<br>
+    <br>
+    # Load best models weights<br>
+    model.load_state_dict(best_model)<br>
+    <br>
+    return model<br></ul>
+    =======================================================================<br>
+</ul>
+</h5>         
+</p>
+
+<p>
+  <h4>Finetuning the convnet</h4>
+ 
+ 
+ <i>  Load a pretrained model and reset final fully connected layer.</i>
+</p>
+
+<p>
+  <h5><ul>
+    =======================================================================<br>
+  model_ft = models.resnet18(pretrained=True)<br>
+num_ftrs = model_ft.fc.in_features<br>
+<br>
+# Here the size of each output sample is set to 2.<br>
+model_ft.fc = torch.nn.Linear(num_ftrs, 2)<br>
+<br>
+model_ft = model_ft.to(device)<br>
+<br>
+criterion = torch.nn.CrossEntropyLoss()<br>
+<br>
+# Observe that all parameters are being optimized<br>
+optimizer_ft = torch.optim.SGD(model_ft.parameters(), lr=0.001, momentum=0.9)<br>
+<br>
+# Decay LR by a factor of 0.1 every 7 epochs<br>
+exp_lr_scheduler = torch.optim.lr_scheduler.StepLR(optimizer_ft, step_size=7, gamma=0.1)<br>
+=======================================================================<br>
+  </ul>
+  </h5>
+</p>
+<p>
+  <h4> Train and evaluate:</h4>
+ 
+ <i> It should take around 15-25 min on CPU. On GPU though, it takes less than a minute.</i>
+</p>
+
+<p>
+  <h5>
+    <ul>
+      =======================================================================<br>
+      model_ft = NN(model = model_ft, optimizer = optimizer_ft, criterion = criterion, scheduler = exp_lr_scheduler, dataset_size = dataset_sizes, num_epoch = 10)
+      =======================================================================<br>
+    </ul>
+  </h5>
+</p>
+
+<p>
+  <h4>ConvNet as fixed feature extractor</h4>
+ 
+  <i>we need to freeze all the network except the final layer. We need to set ``requires_grad == False`` to freeze the parameters so that the gradients are not computed in ``backward()``.</i>
+</p>
+
+<p>
+  <h5>
+    <ul>
+      =======================================================================<br>
+      model_conv = torchvision.models.resnet18(pretrained=True)<br>
+for param in model_conv.parameters():<br>
+    <ul>param.requires_grad = False</ul><br>
+<br>
+# Parameters of newly constructed modules have requires_grad=True by default<br>
+num_ftrs = model_conv.fc.in_features<br>
+model_conv.fc = torch.nn.Linear(num_ftrs, 2, bias=True)<br>
+<br>
+model_conv = model_conv.to(device)<br>
+<br>
+criterion = torch.nn.CrossEntropyLoss()<br>
+<br>
+# Observe that only parameters of final layer are being optimized as opposed to before.<br>
+optimizer_conv = torch.optim.SGD(model_conv.fc.parameters(), lr=0.001, momentum=0.9)<br>
+<br>
+# Decay LR by a factor of 0.1 every 7 epochs<br>
+exp_lr_scheduler = torch.optim.lr_scheduler.StepLR(optimizer_conv, step_size=7, gamma=0.1)<br>
+=======================================================================<br>
+    </ul>
+  </h5>
+</p>
+<p>
+  <h4>Train and evaluate:</h4>
+
+<i>   On CPU this will take about half the time compared to previous scenario. This is expected as gradients don't need to be computed for most of the network. However, forward does need to be computed.</i>
+
+
+</p>
+
+<p>
+  <h5>
+    <ul>
+=======================================================================<br>
+model_conv =  NN(model = model_conv, optimizer = optimizer_conv, criterion = criterion, scheduler = exp_lr_scheduler, dataset_size = dataset_sizes, num_epoch = 10)
+=======================================================================<br>    
+</ul>
+  </h5>
+</p>
+
+<p>
+  <h5>
+    <ul>
+      =======================================================================<br>
+      #saving  model<br>
+path= "/home/isack/Desktop/PyCon Tanzania 2021/saved_model/resnet152.pth"<br>
+<br>
+model = torch.save(model, path)<br>
+=======================================================================<br>
+    </ul>
+  </h5>
+</p>
+
+<p>
+  <h3>
+    Deploying with Flask
+
+  </h3>
+  <i>In this tutorial, we will deploy a PyTorch model using Flask and expose a REST API for model inference.
+Using Flask in this way is by far the easiest way to start serving your PyTorch models, 
+but it will not work for a use case with high performance requirements.</i>
+
+<ul>For that:
+<ul><li>TorchScript, You will Load a TorchScript Model in C++ .</li></ul>
+</ul><br>
+
+
+  <h4>What is Flask?</h4><br>
+<i>
+Flask is a lightweight web server written in Python. It provides a
+convenient way for you to quickly set up a web API for predictions from
+your trained PyTorch model, either for direct use, or as a web service
+within a larger system.
+</i>
+
+</p>
+
+<p>
+ <h4> How to install Falsk Using pip </h4>
+ 
+</p>
+<p>
+  <h5>
+    <ul>
+      pip install Flask==2.0.1 torchvision==0.10.0
+    </ul>
+  </h5>
+</p>
+
+<p>
+  <h4>
+    Building Your Flask Service
+
+  </h4><br>
+
+<i>The full Python script for the Flask service is shown at the end of this
+recipe; you can copy and paste that into your own ``app.py`` file. Below
+we'll look at individual sections to make their functions clear.
+</i><br><br>
+<i>
+All of this work is done in any IDE of your choice. Open your IDE start new project
+and  you have to install flask in your system so that you can be able to import it 
+in your project.
+</i>
+
+</p>
+<br>
+<p>
+  <h4>
+ Simple Web Server
+
+  </h4>
+
+  <ul>
+    Following is a simple webserver:
+  </ul>
+</p>
+
+<p>
+  <h5>
+    <ul>
+      =======================================================================<br>
+      from flask import Flask<br>
+
+
+app = Flask(__name__)<br>
+<br>
+@app.route('/')<br>
+<br>
+def hello():<br>
+<br>
+return 'Hello World!'<br>
+=======================================================================<br>
+    </ul>
+  </h5>
+</p>
+
+<p>
+   <h4>To Run it</h4>
+
+<i>Open your terminal or cmd and go to the directory of your project and type:</i>
+
+
+</p>
+
+<p>
+  <h5>
+    <ul>
+      =======================================================================<br>
+      FLASK_ENV=development FLASK_APP=app.py flask run
+      =======================================================================<br>
+    </ul>
+  </h5>
+</p>
+<p>
+  <h4>
+How to render a template
+  </h4>
+  <i><ul>
+    Following is a simple way to render template:
+    </ul>
+  </i>
+</p>
+
+<p>
+  <h5>
+    <ul>
+      =======================================================================<br>
+      from flask import Flask, render_template<br>
+<br>
+<br>
+
+app = Flask(__name__)<br>
+<br>
+@app.route('/')<br>
+<br>
+def hello():<br>
+<br>
+return render_template 'index.html'<br>
+=======================================================================<br>
+    </ul>
+  </h5>
+</p>
+
+<p>
+  <h4>
+   Inference
+  </h4>
+  <i> 
+In this next sections we will focus on writing the inference code.
+  </i>
+  <i>
+   
+This will involve two parts,
+
+  </i>
+  <ul>
+    <li>
+one where we prepare the image so that it can be fed to our model above
+
+    </li>
+    <li>
+      we will write the code to get the actual prediction from the
+  model.
+    </li>
+  </ul>
+</p>
+
+<p>
+  <h4>
+   Preparing the image
+
+  </h4>
+  <i>
+  
+Our model requires the image to be of 3 channel RGB image of
+size 224 x 224. We will also normalise the image tensor with the
+required mean and standard deviation values.
+We will use transforms from torchvision library and build a
+transform pipeline, which transforms our images as required.
+The method will be taking image data in bytes, applies the
+series of transforms and returns a tensor.
+  </i>
+</p>
+<p>
+  <h5>
+    <ul>
+=======================================================================<br>
+def transform_image(image_byte):<br>
+<br>
+    <ul>transform=transforms.Compose([<br>
+        <ul>transforms.ToTensor(),<br>
+        transforms.Resize(225),<br>
+        transforms.CenterCrop(224),<br>
+        transforms.Normalize(mean = [0.485, 0.456, 0.406] , std = [0.229, 0.224, 0.225])<br>
+        </ul>
+    ])
+<br>
+    image=Image.open(io.BytesIO(image_byte))<br>
+    return transform(image).unsqueeze(0)<br>
+   
+</ul>
+    =======================================================================<br>
+
+    </ul>
+  </h5>
+</p>
+
+<p>
+  <h4>
+     Prediction
+  </h4>
+  <i>
+Now will use a our model to predict the image class. We will use
+one that we saved, load the model and get an inference.
+  </i>
+</p>
+
+<p>
+  <h5>
+    <ul>
+    =======================================================================<br>
+
+
+def prediction(model_path, image_byte, class_map):<br>
+<br>
+    <ul>input = transform_image(image_byte=image_byte)<br>
+    <br>
+    model = torch.load(model_path)<br>
+    model.eval()<br>
+<br>
+    output = model(input)<br>
+    _,pred = torch.max(output, 1)<br>
+    class_idx = pred.item()<br>
+    class_name = class_map[class_idx]<br>
+<br>
+    return (class_idx, class_name)</ul>
+        =======================================================================<br>
+
+    </ul>
+
+  </h5>
+</p>
+
+<p>
+  <h4>
+     Integrating the model in our API Server
+  </h4>
+  <i>
+In this final part we will add our model to our Flask API server.
+Since our API server is supposed to take an image file, we will
+update our predict method to read files from the requests:
+  </i>
+</p>
+
+<p>
+  <h5>
+    <ul>
+
+    =======================================================================<br>
+
+@app.route("/", methods=["POST", "GET"])<br>
+<br>
+<br>
+def predict():<br>
+<br>
+    <ul>if request.method== "POST":<br>
+      <ul><br>
+        file = request.files["image"]<br>
+<br>
+        if file:<br>
+        <ul><br>
+            file_loc = os.path.join(<br>
+                <ul>upload_folder, file.filename</ul><br>
+            )<br>
+            file.save(file_loc)<br>
+<br>
+            with open(file_loc, 'rb') as f:<br>
+                <ul>img_byte = f.read()<br>
+                class_idx, class_name = prediction(model_path=model_path, image_byte=img_byte, class_map=class_map)</ul><br>
+
+        </ul> 
+            return render_template("result.html", class_idx= class_idx, class_name =class_name, file_loc= file_loc, file_name=file.filename)<br>
+      </ul>      
+       <br>
+    return render_template ("index.html", class_idx= "None", class_name =None, file_loc= None)</ul><br>
+
+    
+
+if __name__=="__main__":
+
+    app.run(port=5000, debug=True)
+        =======================================================================<br>
+
+    </ul>
+  </h5>
+</p>
+
+<p>
+  <h4>
+    It assumes that project folder is called FLASK_API and it organized in the following way: ::
+  </h4>
+
+  <ul>
+    <li>
+ `FLASK_API` (Folder)
+ </li>
+       <ul>
+         <li>
+ `Static` (Folder)
+         </li>
+         <ul>
+           <li>
+       css (File)
+          </li>
+         </ul>
+       </ul>
+<br>
+       <ul>
+         <li>
+    `template` (Folder)
+         </li>
+         <ul>
+           <li>
+       index.html (File)
+           </li>
+           <li>
+       result.html (File)<br>
+           </li>
+         </ul><br>
+         
+           <li>
+    app.py (File)
+           </li>
+         
+       </ul>
+    
+ 
+  </ul>
+</p>
+
+<p>
+  <h4>
+    Running The Full Flask App
+  </h4>
+  <i>\
+Paste the following into a file called ``app.py``:
+  </i>
+</p>
+
+<p>
+  <h5>
+    <ul>
+      =======================================================================<br>
+import os<br>
+
+<br>
+import io<br>
+
+<br>
+from PIL import Image<br>
+<br>
+import torch<br>
+
+<br>
+import torchvision<br>
+
+<br>
+from torchvision import transforms<br>
+
+<br>
+from flask import Flask, render_template, request, redirect, url_for<br>
+<br>
+<br>
+
+
+app = Flask(__name__)<br>
+<br>
+upload_folder="/home/isack/Desktop/PyCon Tanzania 2021/Flask_API/static"<br>
+<br>
+
+model_path = "/home/isack/Desktop/PyCon Tanzania 2021/saved_model/resnet152.pth"<br>
+<br>
+
+class_map = {<br><ul>
+    0 : "Ant",<br>
+    1: "Bee"<br>
+    </ul>
+}<br>
+<br>
+def transform_image(image_byte):<br>
+<ul>
+    transform=transforms.Compose([<br>
+        <ul>transforms.ToTensor(),<br>
+        transforms.Resize(225),<br>
+        transforms.CenterCrop(224),<br>
+        transforms.Normalize(mean = [0.485, 0.456, 0.406] , std = [0.229, 0.224, 0.225])<br>
+        </ul>
+    ])<br>
+
+    image=Image.open(io.BytesIO(image_byte))<br>
+    return transform(image).unsqueeze(0)<br>
+</ul><br>
+def prediction(model_path, image_byte, class_map):<br>
+<br>
+<ul>
+    input = transform_image(image_byte=image_byte)<br>
+    <br>
+    model = torch.load(model_path)<br>
+    model.eval()<br>
+<br>
+    output = model(input)<br>
+    _,pred = torch.max(output, 1)<br>
+    class_idx = pred.item()<br>
+    class_name = class_map[class_idx]<br>
+<br>
+    return (class_idx, class_name)<br>
+</ul>
+<br>
+@app.route("/", methods=["POST", "GET"])<br>
+def predict():<br>
+<br>
+<ul>
+    if request.method== "POST":<br>
+       <ul> 
+        file = request.files["image"]<br>
+        <br>
+        if file:<br>
+        <ul>
+            file_loc = os.path.join(<br>
+                <ul>upload_folder, file.filename</ul><br>
+            )<br>
+            file.save(file_loc)<br>
+            <br>
+            with open(file_loc, 'rb') as f:<br>
+                <ul>img_byte = f.read()<br>
+                class_idx, class_name = prediction(model_path=model_path, image_byte=img_byte, class_map=class_map)<br>
+                 </ul>
+<br>
+            return render_template("result.html", class_idx= class_idx, class_name =class_name, file_loc= file_loc, file_name=file.filename)<br>
+            </ul>
+            <br>
+           </ul>
+    return render_template ("index.html", class_idx= "None", class_name =None, file_loc= None)<br>
+</ul>
+ <br>   
+
+if __name__=="__main__":<br>
+<ul>
+   <ul> app.run(port=5000, debug=True)  </ul>    
+   
+    </ul>
+    =======================================================================<br>
+    </ul>
+  </h5>
+</p>
+
+
+<p>
+  <h4>
+   My index html template
+  </h4>
+</p>
+
+
+<p>
+  <h5>
+  <ul>
+   index.html
+
+  </ul>
+</h5>
+</p>
+
+<p>
+  <h4>
+   My result html template
+  </h4>
+</p>
+
+<p>
+  <h5>
+  <ul>
+   result.html
+
+  </ul>
+</h5>
+</p>
+
+<p>
+  <h4>
+    You can find the css file 
+  </h4>
+  <ul>
+    <li>
+  you can download it here
+    </li>
+  </ul>
+  <ul>
+    <h5>
+      <a href="https://github.com/twbs/bootstrap/releases/download/v4.0.0/bootstrap-4.0.0-dist.zip">
+      https://github.com/twbs/bootstrap/releases/download/v4.0.0/bootstrap-4.0.0-dist.zip-dist.zip"
+      </a>
+    </h5>
+  </ul>
+</p>
+
+
+<p>
+  <h4>
+    You can find the data file 
+  </h4>
+  <ul>
+    <li>
+  you can download it here
+    </li>
+  </ul>
+  <ul>
+    <h5>
+      <a href="https://github.com/twbs/bootstrap/releases/download/v4.0.0/bootstrap-4.0.0-dist.ziphttps://download.pytorch.org/tutorial/hymenoptera_data.zip">
+      https://download.pytorch.org/tutorial/hymenoptera_data.zip
+      </a>
+    </h5>
+  </ul>
+</p>
+    </div>
+  </div>
+</article>
+
+  
+    
+
+
+
+
+
+
+<a href="https://github.com/isackodero">
+  <section class="hero -footer _desktop-only -highlightHover -lavender" >
+    <div class="hero-stack container" style="background-image: url('Blog%20-%20io_files/images/careers-desktop-hero.png')">
+      <h1 class="hero-headline -animatedLine">
+        My <br>Github
+      </h1>
+
+      
+
+      
+        <p class="hero-subheading" >
+          Go to my Github page to get all codes and practise by yourself
+        </p>
+      
+
+      
+        <p class="hero-cta">
+          <span class="button -cta">
+            GitHub
+
+            <span class="arrowPacman">
+  <span class="arrowPacman-clip">
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M7.10081 0L5.88245 1.23617L10.7016 6.12576H0V7.87423H10.7016L5.88245 12.7638L7.10081 14L14 7L7.10081 0Z" fill="white"></path>
+</svg>
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M7.10081 0L5.88245 1.23617L10.7016 6.12576H0V7.87423H10.7016L5.88245 12.7638L7.10081 14L14 7L7.10081 0Z" fill="white"></path>
+</svg>
+  </span>
+</span>
+          </span>
+        </p>
+      
+    </div>
+  </section>
+</a>
+
+  
+    
+
+
+
+
+
+
+
+
+
+<section class="pageList -alternateFont  _mobile-only -mobile">
+  
+    <a class="pageList-item _component-color-lavender" href="https://github.com/isackodero" title="Go to my Github page to get all codes and practise by yourself" style="background-image: url('Blog%20-%20io_files/images/careers-mobile-hero.png')">
+      <div class="pageList-content">
+        <header class="pageList-header">
+          
+  
+  
+  
+
+  
+  
+    
+    
+
+    <h2 class="pageList-headline">
+      My <br>GitHub
+    </h2>
+  
+
+        </header>
+
+        <div class="pageList-asset">
+          
+  
+  
+  
+
+  
+
+        </div>
+
+        <p class="pageList-cta button -cta -color-white">
+          <span class="pageList-cta-text">GitHub</span><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M7.10081 0L5.88245 1.23617L10.7016 6.12576H0V7.87423H10.7016L5.88245 12.7638L7.10081 14L14 7L7.10081 0Z" fill="white"></path>
+</svg></p>
+      </div>
+    </a>
+  
+</section>
+
+  
+
+  </main>
+
+  
+
+
+
+
+
+
+  <footer class="globalFooter container " role="contentinfo">
+    <div class="globalFooter-content">
+      <a class="globalFooter-logo" href="Blog - IsackOdero.html" title="Go to my Blog homepage">
+        
+  <div class="logo">
+    <svg viewBox="0 0 62 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd"  fill="var(--color-type-light)">
+        <h1>io</h1>
+      </path>
+    </svg>
+  </div>
+
+      </a>
+
+      <div class="globalFooter-copyright">
+        <p>
+          © IsackOdero 2021
+        </p>
+
+        <p>
+          All Rights Reserved.
+        </p>
+      </div>
+
+      <div class="globalFooter-navigation">
+        
+  
+    <nav class="navigation -footer" aria-labelledby="footer_navLabel">
+      <p id="footer_navLabel" class="_hidden">
+        Footer Navigation
+      </p>
+
+      <ul class="navigation-list">
+        
+          <li class="navigation-listItem">
+            <a class="navigation-link -not-inverted" href="Blog - IsackOdero.html" data-state="active">
+              Blog
+            </a>
+          </li>
+        
+      </ul>
+
+      <div class="nav-social _mobile-only">
+        <a class="-color-gray globalFooter-link" href="mailto:oderoisack1@icloud.com" title="Reach out to my Email">
+          oderoisack1@icloud.com
+        </a>
+
+        <a class="-color-gray globalFooter-link" href="https://twitter.com/IsackOdero" title="Follow me on Twitter">
+          @IsackOdero
+        </a>
+
+      </div>
+    </nav>
+  
+
+      </div>
+
+      <div class="globalFooter-right">
+
+        <div class="globalFooter-social">
+          <a class="-color-gray globalFooter-link" href="mailto:oderoisack1@icloud.com" title="Reach out to my Email">
+            oderoisack1@icloud.com
+          </a>
+
+          <a class="-color-gray globalFooter-link" href="https://twitter.com/IsackOdero" title="Follow me on Twitter">
+            @IsackOdero
+          </a>
+
+
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+  
+  <script src="Blog%20-%20io_files/lottie-player.js"></script>
+
+  
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-96262852-1', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="Blog%20-%20io_files/analytics.js" async=""></script>
+
+
+</body></html>
